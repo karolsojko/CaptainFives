@@ -15,4 +15,5 @@ To retrieve the /five count for the users just mention @captainfives along with 
 
 - Display Top 5 and Top 10 users.
 - Set /fives milestones and automatically congratulate users when their /fives count pass them.
+- Create rewards for each milestone.
 - Expose data over API.
