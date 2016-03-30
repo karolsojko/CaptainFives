@@ -5,13 +5,15 @@
 'use strict';
 import _ from 'lodash';
 import { Five } from './models/five';
-import { captainConfig } from './config';
 
+const captainConfig = require('./config.json');
 const SlackBot = require('slackbots');
 
 export default () => {
-  const captain = new SlackBot(captainConfig);
+  captainConfig.token = process.env.SLACK_BOT_TOKEN || captainConfig.token;
+  captainConfig.name = process.env.SLACK_BOT_NAME || captainConfig.token;
 
+  const captain = new SlackBot(captainConfig);
 
   /**
    * Decides whether Captain intervention is needed or not.

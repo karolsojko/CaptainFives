@@ -4,6 +4,33 @@ Slack bot to keep track of /fives inside X-Team's channels.
 
 ![Captain Fives](/assets/captainOnSlack.png)
 
+### Install
+
+```
+docker-compose run web npm install
+```
+
+### Configure
+
+Type:
+```
+cp app/config.json.dist app/config.json
+```
+
+and edit the created config file.
+Note: the token has to authorize successfully against Slack.
+
+### Run
+
+```
+docker-compose up -d
+```
+
+To see logs type:
+```
+docker-compose logs
+```
+
 ### How it works
 
 When added to a channel, the Captain silently keeps track of every /five given to users.
