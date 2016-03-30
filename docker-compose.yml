@@ -1,0 +1,16 @@
+web:
+  build: .
+  volumes:
+    - .:/var/app
+  ports:
+    - "80:9000"
+  links:
+    - db
+  working_dir: /var/app
+  command: npm start
+db:
+  image: mongo:3.2
+  ports:
+      - "27017:27017"
+  volumes:
+      - /mnt/sda1/var/lib/captain-fives:/data/db

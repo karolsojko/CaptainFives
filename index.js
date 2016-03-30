@@ -6,5 +6,5 @@
 import mongoose from 'mongoose';
 import captainBot from './app/captain';
 
-mongoose.connect('mongodb://localhost/captain-fives');
+mongoose.connect('mongodb://db/captain-fives');
 captainBot();
