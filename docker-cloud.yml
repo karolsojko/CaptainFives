@@ -1,0 +1,14 @@
+captainfives-web:
+  image: kdemoya/captainfives
+  ports:
+    - "9000"
+  links:
+    - captainfives-db:db
+  working_dir: /var/app
+  command: npm start
+  restart: always
+captainfives-db:
+  image: mongo:3.2
+  ports:
+      - "27017"
+  restart: always

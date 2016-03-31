@@ -2,6 +2,8 @@
 
 Slack bot to keep track of /fives inside X-Team's channels.
 
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
+
 ![Captain Fives](/assets/captainOnSlack.png)
 
 ### Install
@@ -12,12 +14,7 @@ docker-compose run web npm install
 
 ### Configure
 
-Type:
-```
-cp app/config.json.dist app/config.json
-```
-
-and edit the created config file.
+Edit the config file `app/config.json`
 Note: the token has to authorize successfully against Slack.
 
 ### Run
