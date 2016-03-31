@@ -4,6 +4,7 @@
   "description": "Keep record of /fives",
   "main": "index.js",
   "scripts": {
+    "postinstall": "cp app/config.json.dist app/config.json",
     "start": "babel-node --presets es2015 index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
